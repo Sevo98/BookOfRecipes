@@ -25,5 +25,31 @@ namespace BookOfRecipes
             this.recipesTableAdapter.Fill(this.recipesDataSet.recipes);
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            if (comboBox1.SelectedIndex == recipesDataSet.Tables["recipes"].Rows.Count - 1)
+            {
+                MessageBox.Show("There are no further recipes");
+            }
+            else
+            {
+                comboBox1.SelectedIndex = comboBox1.SelectedIndex + 1;
+            }
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedIndex < 0)
+            {
+                MessageBox.Show("There are no further recipes");
+            }
+            else
+            {
+                comboBox1.SelectedIndex = comboBox1.SelectedIndex - 1;
+            }
+        }
     }
 }
