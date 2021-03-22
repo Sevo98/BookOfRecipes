@@ -51,5 +51,16 @@ namespace BookOfRecipes
                 comboBox1.SelectedIndex = comboBox1.SelectedIndex - 1;
             }
         }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            //Form2 newForm2 = new Form2();
+            //newForm2.ShowDialog();
+            textBox1.ReadOnly = false;
+            textBox2.ReadOnly = false;
+            textBox3.ReadOnly = false;
+            textBox4.ReadOnly = false;
+            textBox4.Visible = true;
+        }
     }
 }
