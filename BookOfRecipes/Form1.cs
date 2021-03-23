@@ -52,6 +52,13 @@ namespace BookOfRecipes
             }
         }
 
+        private void BindTextBoxes()
+        {
+
+            //textBox1.DataBindings.Add(new Binding("Text", recipesBindingSource.DataMember, "Name"));
+            //textBox2.DataBindings.Add(new Binding("Text", bs, "Age"));
+        }
+
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             //Form2 newForm2 = new Form2();
