@@ -35,18 +35,22 @@ namespace BookOfRecipes
             this.recipesTableAdapter = new BookOfRecipes.RecipesDataSetTableAdapters.recipesTableAdapter();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textBoxInstruction = new System.Windows.Forms.TextBox();
+            this.comboBoxRecipeName = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.labelRecipeName = new System.Windows.Forms.Label();
+            this.labelDifficulty = new System.Windows.Forms.Label();
+            this.labelDescription = new System.Windows.Forms.Label();
+            this.textBoxDifficutly = new System.Windows.Forms.TextBox();
+            this.textBoxDescription = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBoxRecipeName = new System.Windows.Forms.TextBox();
+            this.labelUpdate = new System.Windows.Forms.Label();
+            this.textBoxLastUpdate = new System.Windows.Forms.TextBox();
+            this.labelUUID = new System.Windows.Forms.Label();
+            this.textBoxUUID = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.recipesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.recipesDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -80,26 +84,26 @@ namespace BookOfRecipes
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
-            // textBox2
+            // textBoxInstruction
             // 
-            this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.recipesBindingSource, "name", true));
-            this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.recipesBindingSource, "instructions", true));
-            this.textBox2.Location = new System.Drawing.Point(12, 314);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(535, 167);
-            this.textBox2.TabIndex = 4;
+            this.textBoxInstruction.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.recipesBindingSource, "name", true));
+            this.textBoxInstruction.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.recipesBindingSource, "instructions", true));
+            this.textBoxInstruction.Location = new System.Drawing.Point(12, 314);
+            this.textBoxInstruction.Multiline = true;
+            this.textBoxInstruction.Name = "textBoxInstruction";
+            this.textBoxInstruction.ReadOnly = true;
+            this.textBoxInstruction.Size = new System.Drawing.Size(535, 167);
+            this.textBoxInstruction.TabIndex = 4;
             // 
-            // comboBox1
+            // comboBoxRecipeName
             // 
-            this.comboBox1.DataSource = this.recipesBindingSource;
-            this.comboBox1.DisplayMember = "name";
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(12, 32);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(535, 21);
-            this.comboBox1.TabIndex = 5;
+            this.comboBoxRecipeName.DataSource = this.recipesBindingSource;
+            this.comboBoxRecipeName.DisplayMember = "name";
+            this.comboBoxRecipeName.FormattingEnabled = true;
+            this.comboBoxRecipeName.Location = new System.Drawing.Point(12, 32);
+            this.comboBoxRecipeName.Name = "comboBoxRecipeName";
+            this.comboBoxRecipeName.Size = new System.Drawing.Size(535, 21);
+            this.comboBoxRecipeName.TabIndex = 5;
             // 
             // label1
             // 
@@ -110,53 +114,53 @@ namespace BookOfRecipes
             this.label1.TabIndex = 6;
             this.label1.Text = "Instruction:";
             // 
-            // label2
+            // labelRecipeName
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(262, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 13);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Recipe name:";
+            this.labelRecipeName.AutoSize = true;
+            this.labelRecipeName.Location = new System.Drawing.Point(262, 9);
+            this.labelRecipeName.Name = "labelRecipeName";
+            this.labelRecipeName.Size = new System.Drawing.Size(73, 13);
+            this.labelRecipeName.TabIndex = 7;
+            this.labelRecipeName.Text = "Recipe name:";
             // 
-            // label3
+            // labelDifficulty
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(383, 59);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(50, 13);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Difficulty:";
+            this.labelDifficulty.AutoSize = true;
+            this.labelDifficulty.Location = new System.Drawing.Point(383, 59);
+            this.labelDifficulty.Name = "labelDifficulty";
+            this.labelDifficulty.Size = new System.Drawing.Size(50, 13);
+            this.labelDifficulty.TabIndex = 8;
+            this.labelDifficulty.Text = "Difficulty:";
             // 
-            // label4
+            // labelDescription
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(383, 82);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 13);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Description:";
+            this.labelDescription.AutoSize = true;
+            this.labelDescription.Location = new System.Drawing.Point(383, 82);
+            this.labelDescription.Name = "labelDescription";
+            this.labelDescription.Size = new System.Drawing.Size(63, 13);
+            this.labelDescription.TabIndex = 9;
+            this.labelDescription.Text = "Description:";
             // 
-            // textBox1
+            // textBoxDifficutly
             // 
-            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.recipesBindingSource, "difficulty", true));
-            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.recipesBindingSource, "name", true));
-            this.textBox1.Location = new System.Drawing.Point(439, 56);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(33, 20);
-            this.textBox1.TabIndex = 10;
+            this.textBoxDifficutly.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.recipesBindingSource, "difficulty", true));
+            this.textBoxDifficutly.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.recipesBindingSource, "name", true));
+            this.textBoxDifficutly.Location = new System.Drawing.Point(439, 56);
+            this.textBoxDifficutly.Name = "textBoxDifficutly";
+            this.textBoxDifficutly.ReadOnly = true;
+            this.textBoxDifficutly.Size = new System.Drawing.Size(33, 20);
+            this.textBoxDifficutly.TabIndex = 10;
             // 
-            // textBox3
+            // textBoxDescription
             // 
-            this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.recipesBindingSource, "name", true));
-            this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.recipesBindingSource, "description", true));
-            this.textBox3.Location = new System.Drawing.Point(383, 98);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(164, 186);
-            this.textBox3.TabIndex = 11;
+            this.textBoxDescription.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.recipesBindingSource, "name", true));
+            this.textBoxDescription.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.recipesBindingSource, "description", true));
+            this.textBoxDescription.Location = new System.Drawing.Point(383, 98);
+            this.textBoxDescription.Multiline = true;
+            this.textBoxDescription.Name = "textBoxDescription";
+            this.textBoxDescription.ReadOnly = true;
+            this.textBoxDescription.Size = new System.Drawing.Size(164, 186);
+            this.textBoxDescription.TabIndex = 11;
             // 
             // button1
             // 
@@ -181,7 +185,7 @@ namespace BookOfRecipes
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(15, 487);
+            this.checkBox1.Location = new System.Drawing.Point(15, 491);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(77, 17);
             this.checkBox1.TabIndex = 14;
@@ -189,34 +193,80 @@ namespace BookOfRecipes
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
-            // textBox4
+            // textBoxRecipeName
             // 
-            this.textBox4.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.recipesBindingSource, "name", true));
-            this.textBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.recipesBindingSource, "name", true));
-            this.textBox4.Location = new System.Drawing.Point(346, 7);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(201, 20);
-            this.textBox4.TabIndex = 15;
-            this.textBox4.Visible = false;
+            this.textBoxRecipeName.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.recipesBindingSource, "name", true));
+            this.textBoxRecipeName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.recipesBindingSource, "name", true));
+            this.textBoxRecipeName.Location = new System.Drawing.Point(346, 7);
+            this.textBoxRecipeName.Name = "textBoxRecipeName";
+            this.textBoxRecipeName.ReadOnly = true;
+            this.textBoxRecipeName.Size = new System.Drawing.Size(201, 20);
+            this.textBoxRecipeName.TabIndex = 15;
+            this.textBoxRecipeName.Visible = false;
+            // 
+            // labelUpdate
+            // 
+            this.labelUpdate.AutoSize = true;
+            this.labelUpdate.Location = new System.Drawing.Point(110, 491);
+            this.labelUpdate.Name = "labelUpdate";
+            this.labelUpdate.Size = new System.Drawing.Size(66, 13);
+            this.labelUpdate.TabIndex = 16;
+            this.labelUpdate.Text = "Last update:";
+            this.labelUpdate.Visible = false;
+            // 
+            // textBoxLastUpdate
+            // 
+            this.textBoxLastUpdate.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.recipesBindingSource, "name", true));
+            this.textBoxLastUpdate.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.recipesBindingSource, "lastUpdated", true));
+            this.textBoxLastUpdate.Location = new System.Drawing.Point(182, 487);
+            this.textBoxLastUpdate.Name = "textBoxLastUpdate";
+            this.textBoxLastUpdate.ReadOnly = true;
+            this.textBoxLastUpdate.Size = new System.Drawing.Size(100, 20);
+            this.textBoxLastUpdate.TabIndex = 17;
+            this.textBoxLastUpdate.Visible = false;
+            // 
+            // labelUUID
+            // 
+            this.labelUUID.AutoSize = true;
+            this.labelUUID.Location = new System.Drawing.Point(288, 491);
+            this.labelUUID.Name = "labelUUID";
+            this.labelUUID.Size = new System.Drawing.Size(37, 13);
+            this.labelUUID.TabIndex = 18;
+            this.labelUUID.Text = "UUID:";
+            this.labelUUID.Visible = false;
+            // 
+            // textBoxUUID
+            // 
+            this.textBoxUUID.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.recipesBindingSource, "name", true));
+            this.textBoxUUID.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.recipesBindingSource, "uuid", true));
+            this.textBoxUUID.Location = new System.Drawing.Point(331, 487);
+            this.textBoxUUID.Name = "textBoxUUID";
+            this.textBoxUUID.ReadOnly = true;
+            this.textBoxUUID.Size = new System.Drawing.Size(216, 20);
+            this.textBoxUUID.TabIndex = 19;
+            this.textBoxUUID.Visible = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(559, 516);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBoxUUID);
+            this.Controls.Add(this.labelUUID);
+            this.Controls.Add(this.textBoxLastUpdate);
+            this.Controls.Add(this.labelUpdate);
+            this.Controls.Add(this.textBoxRecipeName);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.textBoxDescription);
+            this.Controls.Add(this.textBoxDifficutly);
+            this.Controls.Add(this.labelDescription);
+            this.Controls.Add(this.labelDifficulty);
+            this.Controls.Add(this.labelRecipeName);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.comboBoxRecipeName);
+            this.Controls.Add(this.textBoxInstruction);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Form1";
             this.Text = "Book of recipes";
@@ -235,18 +285,22 @@ namespace BookOfRecipes
         private RecipesDataSetTableAdapters.recipesTableAdapter recipesTableAdapter;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox textBoxInstruction;
+        private System.Windows.Forms.ComboBox comboBoxRecipeName;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label labelRecipeName;
+        private System.Windows.Forms.Label labelDifficulty;
+        private System.Windows.Forms.Label labelDescription;
+        private System.Windows.Forms.TextBox textBoxDifficutly;
+        private System.Windows.Forms.TextBox textBoxDescription;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBoxRecipeName;
+        private System.Windows.Forms.Label labelUpdate;
+        private System.Windows.Forms.TextBox textBoxLastUpdate;
+        private System.Windows.Forms.Label labelUUID;
+        private System.Windows.Forms.TextBox textBoxUUID;
     }
 }
 

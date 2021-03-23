@@ -29,26 +29,26 @@ namespace BookOfRecipes
         private void button2_Click(object sender, EventArgs e)
         {
 
-            if (comboBox1.SelectedIndex == recipesDataSet.Tables["recipes"].Rows.Count - 1)
+            if (comboBoxRecipeName.SelectedIndex == recipesDataSet.Tables["recipes"].Rows.Count - 1)
             {
                 MessageBox.Show("There are no further recipes");
             }
             else
             {
-                comboBox1.SelectedIndex = comboBox1.SelectedIndex + 1;
+                comboBoxRecipeName.SelectedIndex = comboBoxRecipeName.SelectedIndex + 1;
             }
             
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (comboBox1.SelectedIndex < 0)
+            if (comboBoxRecipeName.SelectedIndex < 0)
             {
                 MessageBox.Show("There are no further recipes");
             }
             else
             {
-                comboBox1.SelectedIndex = comboBox1.SelectedIndex - 1;
+                comboBoxRecipeName.SelectedIndex = comboBoxRecipeName.SelectedIndex - 1;
             }
         }
 
@@ -63,11 +63,32 @@ namespace BookOfRecipes
         {
             //Form2 newForm2 = new Form2();
             //newForm2.ShowDialog();
-            textBox1.ReadOnly = false;
-            textBox2.ReadOnly = false;
-            textBox3.ReadOnly = false;
-            textBox4.ReadOnly = false;
-            textBox4.Visible = true;
+            textBoxDifficutly.ReadOnly = false;
+            textBoxInstruction.ReadOnly = false;
+            textBoxDescription.ReadOnly = false;
+            textBoxRecipeName.ReadOnly = false;
+            textBoxRecipeName.Visible = true;
+            labelUpdate.Visible = true;
+            textBoxLastUpdate.Visible = true;
+            textBoxLastUpdate.ReadOnly = false;
+            labelUUID.Visible = true;
+            textBoxUUID.Visible = true;
+            textBoxUUID.ReadOnly = false;
+
+            if (checkBox1.Checked == false)
+            {
+                textBoxDifficutly.ReadOnly = true;
+                textBoxInstruction.ReadOnly = true;
+                textBoxDescription.ReadOnly = true;
+                textBoxRecipeName.ReadOnly = true;
+                textBoxRecipeName.Visible = false;
+                labelUpdate.Visible = false;
+                textBoxLastUpdate.Visible = false;
+                textBoxLastUpdate.ReadOnly = true;
+                labelUUID.Visible = false;
+                textBoxUUID.Visible = false;
+                textBoxUUID.ReadOnly = true;
+            }
         }
     }
 }
