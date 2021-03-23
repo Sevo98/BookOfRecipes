@@ -43,8 +43,8 @@ namespace BookOfRecipes
             this.labelDescription = new System.Windows.Forms.Label();
             this.textBoxDifficutly = new System.Windows.Forms.TextBox();
             this.textBoxDescription = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonPrevName = new System.Windows.Forms.Button();
+            this.buttonNextName = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.textBoxRecipeName = new System.Windows.Forms.TextBox();
             this.labelUpdate = new System.Windows.Forms.Label();
@@ -108,7 +108,7 @@ namespace BookOfRecipes
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 287);
+            this.label1.Location = new System.Drawing.Point(249, 298);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(59, 13);
             this.label1.TabIndex = 6;
@@ -150,6 +150,7 @@ namespace BookOfRecipes
             this.textBoxDifficutly.ReadOnly = true;
             this.textBoxDifficutly.Size = new System.Drawing.Size(33, 20);
             this.textBoxDifficutly.TabIndex = 10;
+            this.textBoxDifficutly.Text = " ";
             // 
             // textBoxDescription
             // 
@@ -162,25 +163,25 @@ namespace BookOfRecipes
             this.textBoxDescription.Size = new System.Drawing.Size(164, 186);
             this.textBoxDescription.TabIndex = 11;
             // 
-            // button1
+            // buttonPrevName
             // 
-            this.button1.Location = new System.Drawing.Point(12, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(59, 23);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Prev";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonPrevName.Location = new System.Drawing.Point(12, 4);
+            this.buttonPrevName.Name = "buttonPrevName";
+            this.buttonPrevName.Size = new System.Drawing.Size(59, 23);
+            this.buttonPrevName.TabIndex = 12;
+            this.buttonPrevName.Text = "Prev";
+            this.buttonPrevName.UseVisualStyleBackColor = true;
+            this.buttonPrevName.Click += new System.EventHandler(this.prevRecipe_Click);
             // 
-            // button2
+            // buttonNextName
             // 
-            this.button2.Location = new System.Drawing.Point(77, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(59, 23);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "Next";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.buttonNextName.Location = new System.Drawing.Point(77, 4);
+            this.buttonNextName.Name = "buttonNextName";
+            this.buttonNextName.Size = new System.Drawing.Size(59, 23);
+            this.buttonNextName.TabIndex = 13;
+            this.buttonNextName.Text = "Next";
+            this.buttonNextName.UseVisualStyleBackColor = true;
+            this.buttonNextName.Click += new System.EventHandler(this.nextRecipe_Click);
             // 
             // checkBox1
             // 
@@ -257,8 +258,8 @@ namespace BookOfRecipes
             this.Controls.Add(this.labelUpdate);
             this.Controls.Add(this.textBoxRecipeName);
             this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonNextName);
+            this.Controls.Add(this.buttonPrevName);
             this.Controls.Add(this.textBoxDescription);
             this.Controls.Add(this.textBoxDifficutly);
             this.Controls.Add(this.labelDescription);
@@ -293,8 +294,8 @@ namespace BookOfRecipes
         private System.Windows.Forms.Label labelDescription;
         private System.Windows.Forms.TextBox textBoxDifficutly;
         private System.Windows.Forms.TextBox textBoxDescription;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonPrevName;
+        private System.Windows.Forms.Button buttonNextName;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.TextBox textBoxRecipeName;
         private System.Windows.Forms.Label labelUpdate;
