@@ -15,14 +15,6 @@ namespace BookOfRecipes
         public Form1()
         {
             InitializeComponent();
-            //string[] images = new string[]
-            //{
-            //    "images__001", "images__002", "images__003", "images__004", "images__005",
-            //    "images__006", "images__007", "images__008", "images__009", "images__010", "images__011",
-            //    "images__012", "images__013", "images__014", "images__015", "images__016", "images__017",
-            //    "images__018", "images__019", "images__020", "images__021", "images__022", "images__023",
-            //    "images__024"
-            //};
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.StartPosition = FormStartPosition.CenterScreen;
             pictureBox1.DataBindings.Add(new System.Windows.Forms.Binding(
@@ -67,12 +59,6 @@ namespace BookOfRecipes
             }
         }
 
-        private void BindTextBoxes()
-        {
-            //textBox1.DataBindings.Add(new Binding("Text", recipesBindingSource.DataMember, "Name"));
-            //textBox2.DataBindings.Add(new Binding("Text", bs, "Age"));
-        }
-
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
@@ -111,7 +97,7 @@ namespace BookOfRecipes
                 }
             }
 
-            if (checkBox1.Checked == false) 
+            if (checkBox1.Checked == false)
             {
                 textBoxDifficutly.ReadOnly = true;
                 textBoxInstruction.ReadOnly = true;
@@ -127,6 +113,5 @@ namespace BookOfRecipes
                 checkBox1.Checked = false;
             }
         }
-
     }
 }
